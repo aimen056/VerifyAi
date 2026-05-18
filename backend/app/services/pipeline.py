@@ -95,6 +95,18 @@ class VerificationPipeline:
         """
         start = time.perf_counter()
 
+        # 0. Basic Validation for gibberish / single words
+        if len(text.split()) < 4:
+            elapsed_ms = int((time.perf_counter() - start) * 1000)
+            return VerifyResponse(
+                id=str(uuid.uuid4()),
+                verdict=VerdictEnum.UNVERIFIED,
+                confidence=0.0,
+                summary="The claim is too short to contain verifiable facts. Please provide a complete news headline or sentence.",
+                sources=[],
+                processing_time_ms=elapsed_ms,
+            )
+
         # 1. Classify
         classification = await self.classifier.classify(text)
 
