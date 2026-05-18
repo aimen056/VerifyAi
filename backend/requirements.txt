@@ -20,8 +20,8 @@ httpx==0.27.2
 
 # ── ML Pipeline (Phase 2) ────────────────────────────────────
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.1.2+cpu
-torchvision==0.16.2+cpu
+torch==2.5.0+cpu
+torchvision==0.20.0+cpu
 transformers>=4.36.0
 shap>=0.43.0
 numpy>=1.24.0
