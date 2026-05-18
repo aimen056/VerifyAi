@@ -3,7 +3,7 @@
  * Handles communication between the Next.js frontend and the FastAPI backend.
  */
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+const API_BASE = (process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
 
 // ── Types ────────────────────────────────────────────────────
 export type Verdict = "TRUE" | "FALSE" | "MISLEADING" | "UNVERIFIED";
