@@ -176,7 +176,7 @@ export function VerifyPanel() {
                 }`}>
                   {result.verdict === "TRUE" && <ShieldCheck className="h-8 w-8" />}
                   {result.verdict === "FALSE" && <ShieldAlert className="h-8 w-8" />}
-                  {(result.verdict === "MISLEADING" || result.verdict === "UNKNOWN") && <AlertTriangle className="h-8 w-8" />}
+                  {(result.verdict === "MISLEADING" || result.verdict === "UNVERIFIED") && <AlertTriangle className="h-8 w-8" />}
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold tracking-tight text-[#1d1d1f]">
