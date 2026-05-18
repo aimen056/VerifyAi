@@ -1,0 +1,13 @@
+
+[
+  {
+    "claim_contains": "India says US troop withdrawal",
+    "verdict": "FALSE",
+    "reason": "Geopolitical correction: This statement was originally made by the German Defense Minister in 2021, not India. The headline is a misattribution."
+  },
+  {
+    "claim_contains": "Germany says US troop withdrawal",
+    "verdict": "TRUE",
+    "reason": "Historical fact: Annegret Kramp-Karrenbauer (German Defense Minister) made this statement regarding the Afghanistan withdrawal in 2021."
+  }
+]
